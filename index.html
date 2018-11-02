@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <title>Grocery Item</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <main role="main" class="container text-center">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <div class="todo-container">
+                    <form id="toDo" class="todo">
+                        <h1 id="mainTitle" class="display-2 main-title my-4 py-4">todo<span class="sub-title">list</span></h1>
+                        <div class="input-group todo-input">
+                            <input id="todoInput" type="text" class="form-control rounded-0 h-auto p-3" type="text"
+                                placeholder="What to do?">
+                            <div class="input-group-append btn-mic" id="mic">
+                                <span id="micOn" class="input-group-text rounded-0 border-0 d-none" role="button">
+                                    <img src="img/mic-on.svg" alt="mic-on" height="35" title="Mic on">
+                                </span>
+                                <span id="micOff" class="input-group-text rounded-0 border-0" role="button">
+                                    <img src="img/mic-off.svg" alt="mic-off" height="35" title="Mic off">
+                                </span>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-submit rounded-0" type="submit" id="btnSubmit"><img
+                                        src="img/add.svg" height="25" alt="add"></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert feedback hidden" role="alert"></div>
+                    <!-- end of form  -->
+                    <div class="item-container">
+                        <ul class="list-group my-5" id="todoList"></ul>
+                        <button type="button" class="btn btn-green my-3 d-none" id="clearList">Clear all</button>
+                    </div>
+                </div>
+
+                <audio id="beepStart" src="beep-start.wav"></audio>
+                <audio id="beepEnd" src="beep-end.wav"></audio>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container pt-5">
+            <hr class="w-50">
+            <div class="text-center text-muted small pb-3">
+                <ul class="bs-docs-footer-links list-inline mb-2">
+                    <li class="list-inline-item">v1.0.0</li>
+                    <li class="list-inline-item"> - </li>
+                    <li class="list-inline-item"><a href="https://github.com/awran5/todo-list" target="_blank"
+                            title="GitHub">GitHub</a></li>
+                    <li class="list-inline-item"> - </li>
+                    <li class="list-inline-item"><a href="https://github.com/awran5/todo-list/issues" target="_blank"
+                            title="Issues">Issues</a></li>
+                    <li class="list-inline-item"> - </li>
+                    <li class="list-inline-item"><a href="https://www.paypal.me/awran5" title="Donate">Donate</a></li>
+                </ul>
+                <div class="copyright">
+                    Copyright © 2018 <a href="https://github.com/awran5/" title="awran5">awran5</a>. All
+                    Rights
+                    Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- script js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
