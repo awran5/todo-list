@@ -47,11 +47,11 @@ if (!isChrome) {
                 }
             }
             // OnSpeech
-            recognition.onspeechstart = () => {
+            recognition.onstart = () => {
                 todoInput.setAttribute('placeholder', 'Listening..');
             }
             // onEnd
-            recognition.onspeechend = () => {
+            recognition.onend = () => {
                 micOn.classList.add('d-none');
                 micOff.classList.remove('d-none');
                 todoInput.setAttribute('placeholder', 'What else?');
