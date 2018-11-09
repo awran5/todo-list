@@ -74,7 +74,11 @@ if (!isChrome) {
             }
         })
         // always check for errors at the end.
-        .catch(err => console.log(err.name + ": " + err.message));
+        .catch(err => {
+            feedback.classList.add('fadeIn', 'alert-danger');
+            feedback.textContent = `${err.name}: ${err.message}`;
+            console.error(`${err.name}: ${err.message}`)
+        });
 }
 
 // Create new list (if any) from saved localStorage when page load
